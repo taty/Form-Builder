@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <method>get</method>
+    <action>form.php</action>
+    <name>info</name>
+    <item>
+        <label>First Name</label>
+        <class>required</class>
+        <placeholder>Your First Name</placeholder>
+        <elem>input</elem>
+        <type>text</type>
+        <name>firstname</name>        
+    </item>
+    <item>
+        <label>Last Name</label>
+        <class>required</class>
+        <elem>input</elem>
+        <type>text</type>
+        <name>lastname</name>        
+    </item>
+    <item>
+        <label>Description</label>
+        <elem>textarea</elem>
+        <name>description</name>
+        <rows>5</rows>
+        <cols>10</cols>
+        <value>test</value>
+    </item>
+    <item>
+        <label>City</label>
+        <elem>select</elem>
+        <name>city</name>
+        <option>
+            <value>Kiev</value>
+            <text>Kiev</text>
+        </option>
+        <option>
+            <value>Kharkov</value>
+            <text>Kharkov</text>
+        </option>
+    </item>
+    <item>
+        <elem>input</elem>
+        <type>submit</type>
+        <name>send</name>
+        <value>Send</value>
+    </item>
+</form>
