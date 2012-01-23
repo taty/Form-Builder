@@ -9,14 +9,24 @@
         <placeholder>Your First Name</placeholder>
         <elem>input</elem>
         <type>text</type>
-        <name>firstname</name>        
+        <name>firstname</name>
+        <id>cfirstname</id>
     </item>
     <item>
         <label>Last Name</label>
         <class>required</class>
         <elem>input</elem>
         <type>text</type>
-        <name>lastname</name>        
+        <name>lastname</name>
+        <id>clastname</id>
+    </item>
+    <item>
+        <label>Email</label>
+        <class>required email</class>
+        <elem>input</elem>
+        <type>text</type>
+        <name>email</name>
+        <id>cemail</id>
     </item>
     <item>
         <label>Description</label>
@@ -24,12 +34,14 @@
         <name>description</name>
         <rows>5</rows>
         <cols>10</cols>
-        <value>test</value>
+        <id>cdescription</id>
     </item>
     <item>
         <label>City</label>
+        <class>required</class>
         <elem>select</elem>
         <name>city</name>
+        <id>ccity</id>
         <option>
             <value>Kiev</value>
             <text>Kiev</text>
@@ -42,6 +54,7 @@
     <item>
         <elem>input</elem>
         <type>submit</type>
+        <class>submit</class>
         <name>send</name>
         <value>Send</value>
     </item>
