@@ -37,6 +37,75 @@
         <id>cdescription</id>
     </item>
     <item>
+        <label>Color</label>
+        <class>required</class>        
+        <item>
+            <class>required</class>
+            <elem>input</elem>
+            <type>radio</type>
+            <name>color</name>
+            <value>red</value>
+        </item>
+        <item>
+            <class>required</class>
+            <elem>input</elem>
+            <type>radio</type>
+            <name>color</name>            
+            <value>green</value>
+        </item>
+        <item>
+            <class>required</class>
+            <elem>input</elem>
+            <type>radio</type>
+            <name>color</name>
+            <value>blue</value>
+        </item>        
+    </item>
+    <item>
+        <label>Style</label>
+        <class>required</class>
+        <item>
+            <class>required</class>
+            <elem>input</elem>
+            <type>checkbox</type>
+            <name>style</name>
+            <value>medium</value>
+        </item>
+        <item>
+            <class>required</class>
+            <elem>input</elem>
+            <type>checkbox</type>
+            <name>style</name>
+            <value>small</value>
+        </item>
+        <item>
+            <class>required</class>
+            <elem>input</elem>
+            <type>checkbox</type>
+            <name>style</name>
+            <value>big</value>
+        </item>
+    </item>
+    <item>
+        <label>Country</label>
+        <class>required</class>
+        <elem>select</elem>
+        <name>country</name>
+        <id>ccountry</id>
+        <option>
+            <value></value>
+            <text></text>
+        </option>
+        <option>
+            <value>Ukraine</value>
+            <text>Ukraine</text>
+        </option>
+        <option>
+            <value>Russia</value>
+            <text>Russia</text>
+        </option>
+    </item>
+    <item>
         <label>City</label>
         <class>required</class>
         <elem>select</elem>
