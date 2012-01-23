@@ -41,47 +41,64 @@ class FormBuilder
     {
         require_once 'header.php';
         echo "<form name='" . $obj->name . "' method='" . $obj->method . "' action='" . $obj->action . "' >";
-        foreach ($obj->item as $item) 
-        {
-            if (isset($item->label)) 
-            {
-                echo '<label for="'.$item->id.'">' . $item->label.'</label>';
-                if (substr_count($item->class, 'required') > 0)
-                {
-                    echo '<em>*</em>';
-                }
-                else{
-                    echo '<em>&nbsp;</em>';
-                }
-            }
-           
-            $render = 'render' . ucfirst($item->elem);
-            $this->$render($item);
-            echo '<br>';
-        }
+        echo $this->buildItems($obj->item);
         echo "</form>";
         require_once 'footer.php';
+    }
+    public function buildItems($items)
+    {
+        $str = '';
+        foreach ($items as $key => $item)
+        {
+            if (isset($item->label))
+                {
+                    $str .= '<label for="'.$item->id.'">' . $item->label.'</label>';
+                    if (substr_count($item->class, 'required') > 0)
+                    {
+                        $str .= '<em>*</em>';
+                    }
+                    else{
+                        $str .= '<em>&nbsp;</em>';
+                    }
+                }
+                if(isset($item->elem)){
+                    $render = 'render' . ucfirst($item->elem);
+                    $str .= $this->$render($item);
+                }
+                else
+                {
+                    foreach($item->item as $val)
+                    {
+                        $render = 'render' . ucfirst($val->elem);
+                        $str .= $this->$render($val);
+                    }
+                }
+            
+            $str .=  '<br>';
+        }
+        return $str;
     }
 
     protected function renderInput($attrs) 
     {
-        echo "<input ". $this->checkExistAttr($attrs)." >";
+        return "<input ". $this->checkExistAttr($attrs)." >";
 
     }
 
     protected function renderTextarea($attrs) 
     {
-        echo "<textarea".$this->checkExistAttr($attrs)." >" . $attrs->value . "</textarea>";
+        return "<textarea".$this->checkExistAttr($attrs)." >" . $attrs->value . "</textarea>";
     }
 
     protected function renderSelect($attrs) 
     {
-        echo "<select ". $this->checkExistAttr($attrs)." >";
+        $str = "<select ". $this->checkExistAttr($attrs)." >";
         foreach ($attrs->option as $opt) 
         {
-            echo "<option value='" . $opt->value . "'>" . $opt->text . "</option>";
+            $str .= "<option value='" . $opt->value . "'>" . $opt->text . "</option>";
         }
-        echo "</select>";
+        $str .= "</select>";
+        return $str;
     }
 
     protected function checkExistAttr($attrs) 
