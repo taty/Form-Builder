@@ -27,7 +27,7 @@
         <type>text</type>
         <name>email</name>
         <id>cemail</id>
-    </item>
+    </item>    
     <item>
         <label>Description</label>
         <elem>textarea</elem>
@@ -38,7 +38,8 @@
     </item>
     <item>
         <label>Color</label>
-        <class>required</class>        
+        <name>color</name>
+        <class>required </class>
         <item>
             <class>required</class>
             <elem>input</elem>
@@ -59,7 +60,7 @@
             <type>radio</type>
             <name>color</name>
             <value>blue</value>
-        </item>        
+        </item>
     </item>
     <item>
         <label>Style</label>
@@ -111,6 +112,10 @@
         <elem>select</elem>
         <name>city</name>
         <id>ccity</id>
+        <option>
+            <value></value>
+            <text></text>
+        </option>
         <option>
             <value>Kiev</value>
             <text>Kiev</text>
