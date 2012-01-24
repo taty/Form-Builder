@@ -1,71 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form>
-    <method>get</method>
-    <action>form.php</action>
-    <name>info</name>
-    <item>
-        <label>First Name</label>
-        <class>required</class>
-        <placeholder>Your First Name</placeholder>
-        <elem>input</elem>
-        <type>text</type>
-        <name>firstname</name>
-        <id>cfirstname</id>
-    </item>
-    <item>
-        <label>Last Name</label>
-        <class>required</class>
-        <elem>input</elem>
-        <type>text</type>
-        <name>lastname</name>
-        <id>clastname</id>
-    </item>
-    <item>
-        <label>Email</label>
-        <class>required email</class>
-        <elem>input</elem>
-        <type>text</type>
-        <name>email</name>
-        <id>cemail</id>
-    </item>    
-    <item>
-        <label>Description</label>
-        <elem>textarea</elem>
-        <name>description</name>
-        <rows>5</rows>
-        <cols>10</cols>
-        <id>cdescription</id>
-    </item>
-    <item>
-        <label>Color</label>
-        <name>color</name>
-        <class>required </class>
+<layout>
+    <form>
+        <method>get</method>
+        <action>form.php</action>
+        <name>info</name>
+        <enctype>multipart/form-data</enctype>
         <item>
+            <label>First Name</label>
+            <class>required</class>
+            <placeholder>Your First Name</placeholder>
+            <elem>input</elem>
+            <type>text</type>
+            <name>firstname</name>
+            <id>cfirstname</id>
+        </item>
+        <item>
+            <label>Last Name</label>
             <class>required</class>
             <elem>input</elem>
-            <type>radio</type>
+            <type>text</type>
+            <name>lastname</name>
+            <id>clastname</id>
+        </item>
+        <item>
+            <label>Email</label>
+            <elem>input</elem>
+            <type>email</type>
+            <name>email</name>
+            <id>cemail</id>
+        </item>
+        <item>
+            <label>Image</label>
+            <class>required</class>
+            <elem>input</elem>
+            <type>file</type>
+            <name>image</name>
+            <id>cimage</id>
+        </item>
+        <item>
+            <label>Description</label>
+            <elem>textarea</elem>
+            <name>description</name>
+            <rows>5</rows>
+            <cols>10</cols>            
+        </item>
+        <item>
+            <label>Desc</label>
+            <elem>textarea</elem>
+            <name>desc</name>
+            <class>required</class>
+            <rows>5</rows>
+            <cols>10</cols>
+        </item>
+        <item>
+            <label>Color</label>
             <name>color</name>
-            <value>red</value>
+            <class>required </class>
+            <item>
+                <class>required</class>
+                <elem>input</elem>
+                <type>radio</type>
+                <name>color</name>
+                <value>red</value>
+            </item>
+            <item>
+                <class>required</class>
+                <elem>input</elem>
+                <type>radio</type>
+                <name>color</name>
+                <value>green</value>
+            </item>
+            <item>
+                <class>required</class>
+                <elem>input</elem>
+                <type>radio</type>
+                <name>color</name>
+                <value>blue</value>
+            </item>
         </item>
         <item>
-            <class>required</class>
-            <elem>input</elem>
-            <type>radio</type>
-            <name>color</name>            
-            <value>green</value>
-        </item>
-        <item>
-            <class>required</class>
-            <elem>input</elem>
-            <type>radio</type>
-            <name>color</name>
-            <value>blue</value>
-        </item>
-    </item>
-    <item>
-        <label>Style</label>
-        <class>required</class>
-        <item>
+            <label>Style</label>
             <class>required</class>
             <elem>input</elem>
             <type>checkbox</type>
@@ -73,63 +87,105 @@
             <value>medium</value>
         </item>
         <item>
+            <label>Next Style</label>
             <class>required</class>
             <elem>input</elem>
             <type>checkbox</type>
-            <name>style</name>
+            <name>nextstyle</name>
             <value>small</value>
         </item>
         <item>
+            <label>Last Style</label>
             <class>required</class>
             <elem>input</elem>
             <type>checkbox</type>
-            <name>style</name>
+            <name>laststyle</name>
             <value>big</value>
         </item>
-    </item>
-    <item>
-        <label>Country</label>
-        <class>required</class>
-        <elem>select</elem>
-        <name>country</name>
-        <id>ccountry</id>
-        <option>
-            <value></value>
-            <text></text>
-        </option>
-        <option>
-            <value>Ukraine</value>
-            <text>Ukraine</text>
-        </option>
-        <option>
-            <value>Russia</value>
-            <text>Russia</text>
-        </option>
-    </item>
-    <item>
-        <label>City</label>
-        <class>required</class>
-        <elem>select</elem>
-        <name>city</name>
-        <id>ccity</id>
-        <option>
-            <value></value>
-            <text></text>
-        </option>
-        <option>
-            <value>Kiev</value>
-            <text>Kiev</text>
-        </option>
-        <option>
-            <value>Kharkov</value>
-            <text>Kharkov</text>
-        </option>
-    </item>
-    <item>
-        <elem>input</elem>
-        <type>submit</type>
-        <class>submit</class>
-        <name>send</name>
-        <value>Send</value>
-    </item>
-</form>
+        <item>
+            <label>Country</label>
+            <elem>select</elem>
+            <name>country</name>
+            <id>ccountry</id>
+            <option>
+                <value></value>
+                <text></text>
+            </option>
+            <option>
+                <value>Ukraine</value>
+                <text>Ukraine</text>
+            </option>
+            <option>
+                <value>Russia</value>
+                <text>Russia</text>
+            </option>
+        </item>
+        <item>
+            <label>City</label>
+            <elem>select</elem>
+            <name>city</name>
+            <id>ccity</id>
+            <option>
+                <value></value>
+                <text></text>
+            </option>
+            <option>
+                <value>Kiev</value>
+                <text>Kiev</text>
+            </option>
+            <option>
+                <value>Kharkov</value>
+                <text>Kharkov</text>
+            </option>
+        </item>
+        <item>
+            <elem>input</elem>
+            <type>submit</type>
+            <class>submit</class>
+            <name>send</name>
+            <value>Send</value>
+        </item>
+    </form>
+    <form>
+        <method>get</method>
+        <action>form.php</action>
+        <name>information</name>
+        <enctype>multipart/form-data</enctype>
+        <item>
+            <label>First Name</label>
+            <class>required</class>
+            <placeholder>Your First Name</placeholder>
+            <elem>input</elem>
+            <type>text</type>
+            <name>fname</name>
+        </item>
+        <item>
+            <elem>input</elem>
+            <type>submit</type>
+            <class>submit</class>
+            <name>send</name>
+            <value>Send</value>
+        </item>
+    </form>
+    <form>
+        <method>get</method>
+        <action>form.php</action>
+        <name>iinfo</name>
+        <enctype>multipart/form-data</enctype>
+        <item>
+            <label>First Name</label>
+            <class>required</class>
+            <placeholder>Your First Name</placeholder>
+            <elem>input</elem>
+            <type>text</type>
+            <name>fname</name>
+        </item>
+        <item>
+            <elem>input</elem>
+            <type>submit</type>
+            <class>submit</class>
+            <name>send</name>
+            <value>Send</value>
+        </item>
+    </form>
+</layout>
