@@ -5,13 +5,23 @@
         <title>FormBuilder  </title>
         <meta name="keywords" content="FormBuilder">
         <meta name="description" content="FormBuilder">
-	<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
-	<script type="text/javascript" src="js/jquery.validate.js"></script>
+	<!--script type="text/javascript" src="js/jquery-1.7.1.js"></script-->
+	<!--script type="text/javascript" src="js/jquery.validate.js"></script-->
+        <script type="text/javascript" src="js/style.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
         <script type="text/javascript">
-            $(document).ready(function(){
-                $("form").validate();               
-            });
+           /* $(document).ready(function(){
+                $("form").validate({
+                    rules:{
+                        color:{
+                            required : true
+                        },
+                        style:{
+                            required : true
+                        }
+                    }
+                });
+            });*/
         </script>
 </head>
 <body>
