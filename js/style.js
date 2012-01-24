@@ -1,16 +1,18 @@
 window.onload = function(){
 
     var forms = document.getElementsByTagName('form');
-    for (var j=0, l=forms.length; j<l; j++)
+    var count = forms.length;
+    for (var j=0, l=count; j<l; j++)
     {
-          document.forms[j].onsubmit = function () {
+          forms[j].onsubmit = function () {
                 var myFields = new Array('input', 'select', 'textarea');
                 var error = false;
                 var i;
                 for (i in myFields)
                 {
-                    var elements = document.forms[this.name].getElementsByTagName(myFields[i]);
-                    for (var k=0, l=elements.length; k<l; k++)
+                    var elements = this.getElementsByTagName(myFields[i]);
+                    var count = elements.length;
+                    for (var k=0, l=count; k<l; k++)
                     {
                         if(elements[k].className != '' && elements[k].className == 'required'){
                             var el = document.getElementsByClassName('error_'+elements[k].name);
@@ -37,7 +39,34 @@ window.onload = function(){
                 if(error){
                     return false;
                 }
-                document.forms[j].submit();
+                forms[j].submit();
           }
     }
 }
+
+var Object = function(){
+    this.constr();
+}
+var Validator.prototype = Object;
+Validator = {
+    constr = function Validator(){
+    },
+    validate = function(){
+        type = this.getType();
+    },
+    required = function (){
+
+    },
+};
+
+var input.prototype = Validator;
+
+input = {
+
+}
+
+var textarea.prototype = Validator;
+
+var select.prototype = Validator;
+
+var radion.prototype = input;
