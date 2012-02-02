@@ -7,7 +7,7 @@
         <meta name="description" content="FormBuilder">
 	<!--script type="text/javascript" src="js/jquery-1.7.1.js"></script-->
 	<!--script type="text/javascript" src="js/jquery.validate.js"></script-->
-        <script type="text/javascript" src="js/style.js"></script>
+        <script type="text/javascript" src="js/validator.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
         <script type="text/javascript">
            /* $(document).ready(function(){
