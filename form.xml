@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
     <form>
-        <method>get</method>
+        <method>post</method>
         <action>form.php</action>
         <name>info</name>
         <enctype>multipart/form-data</enctype>
-        <item>
+         <item>
             <label>First Name</label>
-            <class>required</class>
+            <!--required>required</required-->
             <placeholder>Your First Name</placeholder>
             <elem>input</elem>
             <type>text</type>
@@ -22,12 +22,12 @@
             <name>lastname</name>
             <id>clastname</id>
         </item>
-        <item>
+ 	<item>
             <label>Email</label>
+            <class>required</class>
             <elem>input</elem>
-            <type>email</type>
+            <type>text</type>
             <name>email</name>
-            <id>cemail</id>
         </item>
         <item>
             <label>Image</label>
@@ -35,14 +35,13 @@
             <elem>input</elem>
             <type>file</type>
             <name>image</name>
-            <id>cimage</id>
         </item>
         <item>
             <label>Description</label>
             <elem>textarea</elem>
             <name>description</name>
             <rows>5</rows>
-            <cols>10</cols>            
+            <cols>10</cols>
         </item>
         <item>
             <label>Desc</label>
@@ -113,6 +112,7 @@
             </option>
             <option>
                 <value>Ukraine</value>
+                <selected>1</selected>
                 <text>Ukraine</text>
             </option>
             <option>
