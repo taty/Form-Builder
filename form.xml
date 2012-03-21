@@ -5,10 +5,10 @@
         <action>form.php</action>
         <name>info</name>
         <enctype>multipart/form-data</enctype>
-         <item>
+        <item>
             <label>First Name</label>
-            <!--required>required</required-->
             <placeholder>Your First Name</placeholder>
+            <class>required</class>
             <elem>input</elem>
             <type>text</type>
             <name>firstname</name>
@@ -51,32 +51,28 @@
             <rows>5</rows>
             <cols>10</cols>
         </item>
-        <item>
+        <!--item>
             <label>Color</label>
+            <class>required</class>
+            <elem>input</elem>
+            <type>radio</type>
             <name>color</name>
-            <class>required </class>
-            <item>
-                <class>required</class>
-                <elem>input</elem>
-                <type>radio</type>
-                <name>color</name>
-                <value>red</value>
-            </item>
-            <item>
-                <class>required</class>
-                <elem>input</elem>
-                <type>radio</type>
-                <name>color</name>
-                <value>green</value>
-            </item>
-            <item>
-                <class>required</class>
-                <elem>input</elem>
-                <type>radio</type>
-                <name>color</name>
-                <value>blue</value>
-            </item>
+            <value>red</value>
         </item>
+        <item>
+             <class>required</class>
+             <elem>input</elem>
+             <type>radio</type>
+             <name>color</name>
+             <value>green</value>
+         </item>
+         <item>
+             <class>required</class>
+             <elem>input</elem>
+             <type>radio</type>
+             <name>color</name>
+             <value>blue</value>
+        </item-->
         <item>
             <label>Style</label>
             <class>required</class>
@@ -123,6 +119,7 @@
         <item>
             <label>City</label>
             <elem>select</elem>
+            <class>required</class>
             <name>city</name>
             <id>ccity</id>
             <option>
@@ -137,48 +134,6 @@
                 <value>Kharkov</value>
                 <text>Kharkov</text>
             </option>
-        </item>
-        <item>
-            <elem>input</elem>
-            <type>submit</type>
-            <class>submit</class>
-            <name>send</name>
-            <value>Send</value>
-        </item>
-    </form>
-    <form>
-        <method>get</method>
-        <action>form.php</action>
-        <name>information</name>
-        <enctype>multipart/form-data</enctype>
-        <item>
-            <label>First Name</label>
-            <class>required</class>
-            <placeholder>Your First Name</placeholder>
-            <elem>input</elem>
-            <type>text</type>
-            <name>fname</name>
-        </item>
-        <item>
-            <elem>input</elem>
-            <type>submit</type>
-            <class>submit</class>
-            <name>send</name>
-            <value>Send</value>
-        </item>
-    </form>
-    <form>
-        <method>get</method>
-        <action>form.php</action>
-        <name>iinfo</name>
-        <enctype>multipart/form-data</enctype>
-        <item>
-            <label>First Name</label>
-            <class>required</class>
-            <placeholder>Your First Name</placeholder>
-            <elem>input</elem>
-            <type>text</type>
-            <name>fname</name>
         </item>
         <item>
             <elem>input</elem>
