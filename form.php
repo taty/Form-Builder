@@ -1,6 +1,6 @@
 <?php
 
-require_once 'FormBuilder.php';
+require_once 'FormBuilder.class.php';
 
 $xml = 'form.xml';
 $form = new FormBuilder();
